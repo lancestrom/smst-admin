@@ -130,6 +130,41 @@ class Dashboard extends CI_Controller
 		redirect('Dashboard/detail_profil_sekolah/' . $id);
 	}
 
+	public function visi_misi_sekolah()
+	{
+		$isi['visi_sekolah'] = $this->Model_visi_misi->data_visi();
+		$isi['misi_sekolah'] = $this->Model_visi_misi->data_misi();
+
+		$isi['logo_sekolah'] = $this->Model_sekolah->profil_sekolah();
+		$this->Model_keamanan->getKeamanan();
+		$header['logo_sekolah'] = $this->Model_sekolah->profil_sekolah();
+		$isi['content'] = 'Sekolah/tampilan_detail_visi_misi_sekolah';
+		$this->load->view('templates/header', $header);
+		$this->load->view('Sekolah/tampilan_dasboard', $isi);
+		$this->load->view('templates/footer');
+	}
+
+	public function hapus_visi_misi()
+	{
+		$this->db->empty_table('sekolah_visi');
+		redirect('Dashboard/menu');
+	}
+
+	public function simpan_visi_sekolah()
+	{
+		$id = $this->input->post('id');
+		$isi = $this->input->post('isi');
+
+		$data = array(
+			'id' => $id,
+			'isi' => $isi,
+		);
+
+		$this->db->insert('sekolah_visi', $data);
+
+		redirect('Dashboard/menu');
+	}
+
 
 	public function logout()
 	{

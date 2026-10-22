@@ -66,6 +66,7 @@
 									</td>
 									<td>
 										<a href="<?= base_url('Dashboard/' . $row['setting_base_url']) ?>" class="btn btn-primary btn-sm text-uppercase font-weight-bolder">detail</a>
+									</td>
 							</tr>
 						<?php } ?>
 						</tbody>
