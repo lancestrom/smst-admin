@@ -144,10 +144,10 @@ class Dashboard extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
-	public function hapus_visi_misi()
+	public function hapus_visi_sekolah()
 	{
 		$this->db->empty_table('sekolah_visi');
-		redirect('Dashboard/menu');
+		redirect('Dashboard/visi_misi_sekolah');
 	}
 
 	public function simpan_visi_sekolah()
@@ -162,7 +162,28 @@ class Dashboard extends CI_Controller
 
 		$this->db->insert('sekolah_visi', $data);
 
-		redirect('Dashboard/menu');
+		redirect('Dashboard/visi_misi_sekolah');
+	}
+
+	public function hapus_misi_sekolah()
+	{
+		$this->db->empty_table('sekolah_misi');
+		redirect('Dashboard/visi_misi_sekolah');
+	}
+
+	public function simpan_misi_sekolah()
+	{
+		$id = $this->input->post('id');
+		$isi = $this->input->post('isi');
+
+		$data = array(
+			'id' => $id,
+			'isi' => $isi,
+		);
+
+		$this->db->insert('sekolah_misi', $data);
+
+		redirect('Dashboard/visi_misi_sekolah');
 	}
 
 

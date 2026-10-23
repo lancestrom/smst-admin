@@ -104,7 +104,7 @@
 								<button type="button" class="btn btn-primary btn-sm text-uppercase font-weight-bolder" data-toggle="modal" data-target="#tambah_visi_sekolah">
 									tambah visi sekolah
 								</button>
-								<a class="btn btn-sm btn-danger text-uppercase font-weight-bolder" href="<?= base_url() ?>Dashboard/hapus_visi_misi">Hapus Visi Misi sekolah</a>
+								<a class="btn btn-sm btn-danger text-uppercase font-weight-bolder" href="<?= base_url() ?>Dashboard/hapus_visi_sekolah">Hapus Visi sekolah</a>
 							</div>
 						</div>
 					</div>
@@ -147,6 +147,19 @@
 						<i class="fas fa-list-ul text-info mr-2" aria-hidden="true"></i>Misi Sekolah
 					</h5>
 				</div>
+				<div class="row">
+					<div class="col-md mt-3">
+						<div class="card">
+							<div class="card-body">
+								<button type="button" class="btn btn-primary btn-sm text-uppercase font-weight-bolder" data-toggle="modal" data-target="#tambah_misi_sekolah">
+									tambah misi sekolah
+								</button>
+								<a class="btn btn-sm btn-danger text-uppercase font-weight-bolder" href="<?= base_url() ?>Dashboard/hapus_misi_sekolah">Hapus Misi sekolah</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="card-body">
 					<div class="table-responsive">
 						<table class="table table-striped vision-mission__table">
@@ -193,8 +206,35 @@
 						<input type="text" class="form-control" name="id">
 					</div>
 					<div class="form-group">
-						<label>Masukan Visi</label>
-						<input type="text" class="form-control" name="isi">
+						<label for="exampleFormControlTextarea1">Masukan Visi</label>
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="isi"></textarea>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary">Save changes</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="tambah_misi_sekolah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header bg-primary text-white">
+				<h5 class="modal-title text-uppercase">tambah misi sekolah</h5>
+			</div>
+			<div class="modal-body">
+				<form action="<?= base_url() ?>Dashboard/simpan_misi_sekolah" method="post">
+					<div class="form-group">
+						<label>Masukan ID</label>
+						<input type="text" class="form-control" name="id">
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlTextarea1">Masukan Visi</label>
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="isi"></textarea>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
