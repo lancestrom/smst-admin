@@ -186,6 +186,17 @@ class Dashboard extends CI_Controller
 		redirect('Dashboard/visi_misi_sekolah');
 	}
 
+	public function jurusan()
+	{
+		$isi['logo_sekolah'] = $this->Model_sekolah->profil_sekolah();
+		$this->Model_keamanan->getKeamanan();
+		$header['logo_sekolah'] = $this->Model_sekolah->profil_sekolah();
+		$isi['content'] = 'Sekolah/tampilan_jurusan_sekolah';
+		$this->load->view('templates/header', $header);
+		$this->load->view('Sekolah/tampilan_dasboard', $isi);
+		$this->load->view('templates/footer');
+	}
+
 
 	public function logout()
 	{
