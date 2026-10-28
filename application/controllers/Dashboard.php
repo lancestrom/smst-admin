@@ -188,6 +188,8 @@ class Dashboard extends CI_Controller
 
 	public function jurusan()
 	{
+		$isi['jurusan'] = $this->Model_jurusan->dataJurusan();
+
 		$isi['logo_sekolah'] = $this->Model_sekolah->profil_sekolah();
 		$this->Model_keamanan->getKeamanan();
 		$header['logo_sekolah'] = $this->Model_sekolah->profil_sekolah();
@@ -195,6 +197,12 @@ class Dashboard extends CI_Controller
 		$this->load->view('templates/header', $header);
 		$this->load->view('Sekolah/tampilan_dasboard', $isi);
 		$this->load->view('templates/footer');
+	}
+
+	public function hapus_jurusan()
+	{
+		$this->db->empty_table('sekolah_jurusan');
+		redirect('Dashboard/jurusan');
 	}
 
 
