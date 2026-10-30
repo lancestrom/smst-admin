@@ -121,9 +121,9 @@
 						<dt>NPSN</dt>
 						<dd><?= $detail_profil_sekolah['npsn'] ?></dd>
 						<dt>Nama Sekolah</dt>
-						<dd><?= $detail_profil_sekolah['nama_sekolah'] ?></dd>
+						<dd class="text-uppercase"><?= $detail_profil_sekolah['nama_sekolah'] ?></dd>
 						<dt>Kepala Sekolah</dt>
-						<dd><?= $detail_profil_sekolah['nama_kepala_sekolah'] ?></dd>
+						<dd class="text-uppercase"><?= $detail_profil_sekolah['nama_kepala_sekolah'] ?></dd>
 						<dt>Telepon</dt>
 						<dd><?= $detail_profil_sekolah['telepon'] ?></dd>
 						<dt>Email</dt>
@@ -131,7 +131,7 @@
 						<dt>Alamat</dt>
 						<dd><?= $detail_profil_sekolah['alamat'] ?></dd>
 						<dt>Deskripsi</dt>
-						<dd class="text-justify"><?= $detail_profil_sekolah['deskripsi'] ?></dd>
+						<dd class="text-justify text-capitalize"><?= $detail_profil_sekolah['deskripsi'] ?></dd>
 					</dl>
 				</div>
 			</div>

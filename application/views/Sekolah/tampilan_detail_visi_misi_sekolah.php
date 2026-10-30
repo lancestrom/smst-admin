@@ -84,13 +84,12 @@
 <div class="vision-mission">
 	<div class="card vision-mission__hero shadow mb-4">
 		<div class="card-body vision-mission__hero-body text-white text-center">
-			<i class="fas fa-bullseye fa-2x mb-3" aria-hidden="true"></i>
 			<h2 class="h4 text-uppercase font-weight-bold mb-1">Visi dan Misi Sekolah</h2>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-lg-6 mb-4">
+		<div class="col-md-5 mb-4">
 			<div class="card vision-mission__section shadow-sm border-left-primary">
 				<div class="card-header">
 					<h5 class="text-uppercase font-weight-bold text-gray-800 mb-0">
@@ -125,7 +124,7 @@
 								?>
 									<tr>
 										<td class="vision-mission__number"><?= $no++; ?></td>
-										<td class="vision-mission__text"><?= $row['isi']; ?></td>
+										<td class="vision-mission__text text-capitalize"><?= $row['isi']; ?></td>
 									</tr>
 								<?php } ?>
 								<?php if (empty($visi_sekolah)) { ?>
@@ -140,7 +139,7 @@
 			</div>
 		</div>
 
-		<div class="col-lg-6 mb-4">
+		<div class="col-md-7 mb-4">
 			<div class="card vision-mission__section shadow-sm border-left-info">
 				<div class="card-header">
 					<h5 class="text-uppercase font-weight-bold text-gray-800 mb-0">
@@ -159,10 +158,9 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="card-body">
 					<div class="table-responsive">
-						<table class="table table-striped vision-mission__table">
+						<table class="table table-striped vision-mission__table table-bordered">
 							<thead>
 								<tr>
 									<th scope="col" class="vision-mission__number">#</th>
@@ -176,7 +174,7 @@
 								?>
 									<tr>
 										<td class="vision-mission__number"><?= $no++; ?></td>
-										<td class="vision-mission__text"><?= $row['isi']; ?></td>
+										<td class="vision-mission__text text-capitalize"><?= $row['isi']; ?></td>
 									</tr>
 								<?php } ?>
 								<?php if (empty($misi_sekolah)) { ?>

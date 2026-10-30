@@ -94,7 +94,7 @@
 									<td><span class="school-majors__number"><?= $no++; ?></span></td>
 									<td class="text-muted"><?= html_escape($row['id']); ?></td>
 									<td><span class="badge badge-info"><?= html_escape($row['kode']); ?></span></td>
-									<td class="text-left font-weight-bold text-gray-800"><?= html_escape($row['nama']); ?></td>
+									<td class="text-left font-weight-bold text-gray-800 text-capitalize"><?= html_escape($row['nama']); ?></td>
 								</tr>
 							<?php endforeach; ?>
 						<?php else : ?>
@@ -119,12 +119,26 @@
 				<h5 class="modal-title text-uppercase" id="exampleModalLabel"> Tambah jurusan</h5>
 			</div>
 			<div class="modal-body">
-				...
+				<form action="<?= base_url() ?>Dashboard/simpan_jurusan" method="post">
+					<div class="form-group">
+						<label class="text-uppercase">ID Jurusan</label>
+						<input type="text" class="form-control" name="id">
+					</div>
+					<div class="form-group">
+						<label class="text-uppercase">nama</label>
+						<input type="text" class="form-control" name="nama">
+					</div>
+					<div class="form-group">
+						<label class="text-uppercase">kode</label>
+						<input type="text" class="form-control" name="kode">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary">Save changes</button>
+					</div>
+				</form>
 			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
-			</div>
+
 		</div>
 	</div>
 </div>

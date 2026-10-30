@@ -99,15 +99,15 @@
 						<dt>NPSN</dt>
 						<dd><?= $detail_profil_sekolah['npsn'] ?></dd>
 						<dt>Nama Sekolah</dt>
-						<dd><?= $detail_profil_sekolah['nama_sekolah'] ?></dd>
+						<dd class="text-uppercase"><?= $detail_profil_sekolah['nama_sekolah'] ?></dd>
 						<dt>Kepala Sekolah</dt>
-						<dd><?= $detail_profil_sekolah['nama_kepala_sekolah'] ?></dd>
+						<dd class="text-uppercase"><?= $detail_profil_sekolah['nama_kepala_sekolah'] ?></dd>
 						<dt>Telepon</dt>
 						<dd><?= $detail_profil_sekolah['telepon'] ?></dd>
 						<dt>Email</dt>
 						<dd><?= $detail_profil_sekolah['email'] ?></dd>
 						<dt>Alamat</dt>
-						<dd><?= $detail_profil_sekolah['alamat'] ?></dd>
+						<dd class="text-capitalize"><?= $detail_profil_sekolah['alamat'] ?></dd>
 					</dl>
 				</div>
 			</div>

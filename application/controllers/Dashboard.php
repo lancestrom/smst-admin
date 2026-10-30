@@ -205,6 +205,23 @@ class Dashboard extends CI_Controller
 		redirect('Dashboard/jurusan');
 	}
 
+	public function simpan_jurusan()
+	{
+		$id = $this->input->post('id');
+		$nama = $this->input->post('nama');
+		$kode = $this->input->post('kode');
+
+		$data = array(
+			'id' => $id,
+			'nama' => $nama,
+			'kode' => $kode
+		);
+
+		$this->db->insert('sekolah_jurusan', $data);
+
+		redirect('Dashboard/jurusan');
+	}
+
 
 	public function logout()
 	{
