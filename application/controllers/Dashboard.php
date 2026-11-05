@@ -56,19 +56,6 @@ class Dashboard extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
-	public function profil_bkk()
-	{
-		$isi['profil_bkk'] = $this->Model_bkk->profil_bkk();
-
-		$this->Model_keamanan->getKeamanan();
-		$header['logo_sekolah'] = $this->Model_sekolah->profil_sekolah();
-		$isi['content'] = 'Sekolah/tampilan_profil_bkk';
-		$this->load->view('templates/header', $header);
-		$this->load->view('Sekolah/tampilan_dasboard', $isi);
-		$this->load->view('templates/footer');
-	}
-
-
 	public function detail_profil_sekolah()
 	{
 		$isi['detail_profil_sekolah'] = $this->Model_sekolah->detailprofil_sekolah();
@@ -221,6 +208,30 @@ class Dashboard extends CI_Controller
 
 		redirect('Dashboard/jurusan');
 	}
+
+	// BKK
+	public function profil_bkk()
+	{
+		$this->Model_keamanan->getKeamanan();
+		$header['logo_sekolah'] = $this->Model_sekolah->profil_sekolah();
+		$isi['content'] = 'BKK/bkk_dalam_perbaikan';
+		$this->load->view('templates/header', $header);
+		$this->load->view('Sekolah/tampilan_dasboard', $isi);
+		$this->load->view('templates/footer');
+	}
+	// END BKK
+
+	// BANK MINI
+	public function profil_bank_mini()
+	{
+		$this->Model_keamanan->getKeamanan();
+		$header['logo_sekolah'] = $this->Model_sekolah->profil_sekolah();
+		$isi['content'] = 'Bank_mini/bank_mini_dalam_perbaikan';
+		$this->load->view('templates/header', $header);
+		$this->load->view('Sekolah/tampilan_dasboard', $isi);
+		$this->load->view('templates/footer');
+	}
+	// END BANK MINI
 
 
 	public function logout()

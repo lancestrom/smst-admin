@@ -33,6 +33,12 @@
 				<i class="fas fa-school"></i>
 				<span>BKK</span></a>
 		</li>
+
+		<li class="nav-item">
+			<a class="nav-link" href="<?= base_url() ?>Dashboard/profil_bank_mini">
+				<i class="fas fa-school"></i>
+				<span>Bank Mini</span></a>
+		</li>
 		<hr class="sidebar-divider">
 
 		<div class="sidebar-heading">
